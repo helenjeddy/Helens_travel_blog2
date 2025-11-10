@@ -1,0 +1,104 @@
+/* Mobile First view*/
+header {
+    background-color: #f3f5f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+h1 {
+   font-family: "Marcellus", sans-serif;
+   font-weight: 200;
+   font-size: 30px;
+   color: black;
+   float: left; 
+   padding: 0 20px;
+   text-align: center;
+   width: 100%;
+}
+
+#hamburger_checkbox {
+    display: none;
+}
+
+#hamburger_image {
+    background-color: #6a7943;
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 10%;
+   
+}
+
+ #hamburger_checkbox:not(:checked) + nav {
+    display: none;
+ }
+ nav a {
+    color: black;
+    float: left;
+    font-size: 17px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+ }
+/* Invert color on mouse hover */
+ nav a:hover {
+    background-color: #6a7943;
+    color: #f3f5f0;
+ }
+/* Invert the colors on tab key focus */
+ nav a:focus {
+    background-color: #6a7943;
+    color: #f3f5f0;
+    outline: none;
+ }
+/* Make the current link highlighted */
+ .active_nav {
+    background-color: #af3a80;
+    color: #f3f5f0;
+ }
+
+
+ /* Medium devices (landscape tablets, 760px and up) */
+@media only screen and (min-width: 768px) {
+  
+   #hamburger_image, label[for="hamburger_checkbox"] {
+        display: none;
+    }
+
+    #hamburger_checkbox:not(:checked) +nav {
+    display: block;
+    }
+   header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+   }
+
+   h1 {
+    text-align: left;
+    width: auto;
+
+ }
+
+nav {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+ }
+
+
+ nav a {
+   
+    display: inline-block;
+    width: auto;
+    float: none;
+ }
+}
